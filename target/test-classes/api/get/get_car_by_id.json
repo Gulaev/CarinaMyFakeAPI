@@ -1,0 +1,12 @@
+{
+  "Car": {
+    "id": ${car.id},
+    "car": "${car.name}",
+    "car_model": "${car.model}",
+    "car_color": "${car.color}",
+    "car_model_year": "predicate:datePredicate",
+    "car_vin": "type:String",
+    "price": "skip",
+    "availability": false
+  }
+}

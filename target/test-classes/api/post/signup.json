@@ -1,0 +1,16 @@
+{
+  "Data": {
+    "firstName": "${user.firstName}",
+    "lastName": "${user.lastName}",
+    "message": "${user.message}",
+    "mobile": ${user.mobile?c},
+    "country": "${user.country}",
+    "edm": "skip"
+  },
+  "Message": "User Created Successfully.",
+  "UserId": "type:String",
+  "CreatedAt": "type:Long",
+  "NextSteps": "type:String",
+  "EmailValidation": "type:String",
+  "Subscribed": false
+}
