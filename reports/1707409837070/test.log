@@ -1,0 +1,42 @@
+[2024-02-08 04:30:37] [1] [INFO] [TestNG] Running:
+  /Users/denisgulaev/Library/Caches/JetBrains/IntelliJIdea2022.1/temp-testng-customsuite.xml
+
+[2024-02-08 04:30:38] [1] [INFO] Request method:	POST
+Request URI:	https://myfakeapi.com/api/login
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:
+{
+    "userName": "John",
+    "password": "Jardani",
+    "verified": true
+}
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=0, must-revalidate
+Connection: keep-alive
+Content-Length: 305
+Content-Type: application/json; charset=utf-8
+Date: Thu, 08 Feb 2024 16:30:38 GMT
+Etag: W/"131-n4zlQZLuLb2Av5UKd4S9PF3JCuw"
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+X-Powered-By: Express
+X-Vercel-Cache: MISS
+X-Vercel-Id: fra1::sfo1::7rhc5-1707409837946-01c06c79a902
+
+{
+    "userDetails": {
+        "userName": "John",
+        "password": "Jardani",
+        "verified": true
+    },
+    "session": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IkpvaG4iLCJwYXNzd29yZCI6IkphcmRhbmkiLCJ3ZWJzaXRlIjoid3d3Lm15ZmFrZWFwaS5jb20iLCJpYXQiOjE3MDc0MDk4MzgsImV4cCI6MTcwNzQxMTYzOH0.BQ5iGpQcMPGboc1G2YjshmW5DUtcpO3UJbAX28VSsMo"
+}
+
