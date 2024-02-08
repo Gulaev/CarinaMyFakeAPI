@@ -1,7 +1,7 @@
 package com.slovd.CarinaMyFakeAPI.api.post;
 
 
-import com.slovd.CarinaMyFakeAPI.model.User;
+import com.slovd.CarinaMyFakeAPI.api.model.User;
 import com.slovd.CarinaMyFakeAPI.service.JsonUtil;
 import com.zebrunner.carina.api.AbstractApiMethodV2;
 import com.zebrunner.carina.api.annotation.Endpoint;
@@ -14,7 +14,7 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 
 @Endpoint(url = "${config.api_url}/login", methodType = HttpMethodType.POST)
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
-@Header(key ="Content-Type", value ="application/json" )
+@Header(key = "Content-Type", value = "application/json")
 @ResponseTemplatePath(path = "api/post/login.json")
 public class Login extends AbstractApiMethodV2 {
 

@@ -1,0 +1,42 @@
+[2024-02-08 04:20:47] [1] [INFO] [TestNG] Running:
+  /Users/denisgulaev/Library/Caches/JetBrains/IntelliJIdea2022.1/temp-testng-customsuite.xml
+
+[2024-02-08 04:20:48] [1] [INFO] Request method:	GET
+Request URI:	https://myfakeapi.com/api/cars/1
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:			<none>
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Age: 0
+Cache-Control: public, max-age=0, must-revalidate
+Connection: keep-alive
+Content-Length: 170
+Content-Type: application/json; charset=utf-8
+Date: Thu, 08 Feb 2024 16:20:48 GMT
+Etag: W/"aa-41/GzuM/z/X3dff4NOVBiA4O2wo"
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+X-Powered-By: Express
+X-Vercel-Cache: MISS
+X-Vercel-Id: fra1::sfo1::p56b5-1707409248019-5dea088c8bce
+
+{
+    "Car": {
+        "id": 1,
+        "car": "Mitsubishi",
+        "car_model": "Montero",
+        "car_color": "Yellow",
+        "car_model_year": 2002,
+        "car_vin": "SAJWJ0FF3F8321657",
+        "price": "$2814.46",
+        "availability": false
+    }
+}
+

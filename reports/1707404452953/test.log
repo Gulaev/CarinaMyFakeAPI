@@ -1,0 +1,15 @@
+[2024-02-08 03:00:52] [1] [INFO] 
+=========== WebDriver configuration ===========
+url=https://prom.ua/
+browser=chrome
+selenium_url=http://localhost:4444/wd/hub
+-------------- Driver capabilities ------------
+===============================================
+
+[2024-02-08 03:00:52] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-08 03:00:53] [1] [INFO] [TestNG] Running:
+  /Users/denisgulaev/Library/Caches/JetBrains/IntelliJIdea2022.1/temp-testng-customsuite.xml
+
+[2024-02-08 03:00:53] [1] [INFO] Set thread-count=1
+[2024-02-08 03:00:53] [1] [INFO] Set data-provider-thread-count=1
+[2024-02-08 03:00:53] [1] [INFO] CARINA_CORE_VERSION: 1.2.6

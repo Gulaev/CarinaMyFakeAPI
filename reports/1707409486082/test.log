@@ -1,0 +1,38 @@
+[2024-02-08 04:24:46] [1] [INFO] [TestNG] Running:
+  /Users/denisgulaev/Library/Caches/JetBrains/IntelliJIdea2022.1/temp-testng-customsuite.xml
+
+[2024-02-08 04:24:47] [1] [INFO] Request method:	POST
+Request URI:	https://myfakeapi.com/api/contactus
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:
+{
+    "firstName": "Jardani",
+    "lastName": "Jovonovich",
+    "message": "Need help",
+    "contact": 1234567890
+}
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=0, must-revalidate
+Connection: keep-alive
+Content-Length: 71
+Content-Type: application/json; charset=utf-8
+Date: Thu, 08 Feb 2024 16:24:47 GMT
+Etag: W/"47-F9Rt6tL/MgE3jCmcrg74PR5yLzY"
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+X-Powered-By: Express
+X-Vercel-Cache: MISS
+X-Vercel-Id: fra1::sfo1::cvkcg-1707409487035-e71b15d8d00c
+
+{
+    "message": "Form subimitted successfully at 2024-02-08T16:24:47+00:00"
+}
+

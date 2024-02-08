@@ -12,9 +12,15 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <carina-api-version>1.2.4</carina-api-version>
+    <carina-core-version>1.2.6</carina-core-version>
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>com.zebrunner</groupId>
+      <artifactId>carina-core</artifactId>
+      <version>${carina-core-version}</version>
+    </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>

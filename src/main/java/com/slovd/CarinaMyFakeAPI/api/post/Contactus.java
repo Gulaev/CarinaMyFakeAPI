@@ -1,6 +1,6 @@
 package com.slovd.CarinaMyFakeAPI.api.post;
 
-import com.slovd.CarinaMyFakeAPI.model.User;
+import com.slovd.CarinaMyFakeAPI.api.model.User;
 import com.slovd.CarinaMyFakeAPI.service.JsonUtil;
 import com.zebrunner.carina.api.AbstractApiMethodV2;
 import com.zebrunner.carina.api.annotation.Endpoint;

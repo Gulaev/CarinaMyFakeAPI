@@ -1,8 +1,6 @@
 package com.slovd.CarinaMyFakeAPI.api.post;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.slovd.CarinaMyFakeAPI.model.User;
+import com.slovd.CarinaMyFakeAPI.api.model.User;
 import com.slovd.CarinaMyFakeAPI.service.JsonUtil;
 import com.zebrunner.carina.api.AbstractApiMethodV2;
 import com.zebrunner.carina.api.annotation.Endpoint;
@@ -20,7 +18,6 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 public class Signup extends AbstractApiMethodV2 {
 
   public Signup(User user) {
-    super();
     setBodyContent(JsonUtil.toJson(user));
     addProperty("user", user);
     ignorePropertiesProcessor(NotStringValuesProcessor.class);

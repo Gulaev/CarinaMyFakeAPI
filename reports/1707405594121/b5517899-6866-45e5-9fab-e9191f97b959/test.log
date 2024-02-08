@@ -1,0 +1,6 @@
+[2024-02-08 03:19:55] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-08 03:19:55] [1] [INFO] TEST [CarinaMyFakeAPI - verifySearchTest] STARTED at [17:19:55 2024-02-08]
+[2024-02-08 03:19:55] [1] [INFO] Starting driver session...
+[2024-02-08 03:19:57] [1] [INFO] Driver session started.
+[2024-02-08 03:19:57] [1] [INFO] INFO: opening url 'https://prom.ua/'
+[2024-02-08 03:19:59] [1] [INFO] TEST [CarinaMyFakeAPI - verifySearchTest] PASSED at [17:19:59 2024-02-08]
