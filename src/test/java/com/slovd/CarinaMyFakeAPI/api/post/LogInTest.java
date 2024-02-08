@@ -3,7 +3,7 @@ package com.slovd.CarinaMyFakeAPI.api.post;
 import com.slovd.CarinaMyFakeAPI.api.model.User;
 import org.testng.annotations.Test;
 
-public class LoginTest {
+public class LogInTest {
 
   @Test
   public void isLogin() {
@@ -11,7 +11,7 @@ public class LoginTest {
     user.setUserName("John");
     user.setPassword("Jardani");
     user.setVerified(true);
-    Login login = new Login(user);
+    LogIn login = new LogIn(user);
     login.callAPIExpectSuccess();
     login.validateResponse();
   }
