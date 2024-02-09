@@ -1,7 +1,5 @@
 package com.slovd.CarinaMyFakeAPI.api.put;
 
-import static org.testng.Assert.*;
-
 import com.slovd.CarinaMyFakeAPI.api.model.Product;
 import org.testng.annotations.Test;
 
@@ -16,9 +14,9 @@ public class ProductPutTest {
     product.setImage("Some image");
     product.setCategory("Some category");
     product.setDescription("Some description");
-    UpdateProductById updateProductById = new UpdateProductById(product);
-    updateProductById.callAPIExpectSuccess();
-    updateProductById.validateResponse();
+    UpdateProductByIdMethod updateProductByIdMethod = new UpdateProductByIdMethod(product);
+    updateProductByIdMethod.callAPIExpectSuccess();
+    updateProductByIdMethod.validateResponse();
   }
 
 }

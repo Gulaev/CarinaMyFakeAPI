@@ -1,5 +1,7 @@
-package com.slovd.CarinaMyFakeAPI.api.get;
+package com.slovd.CarinaMyFakeAPI.api.post;
 
+import com.slovd.CarinaMyFakeAPI.api.model.Product;
+import com.slovd.CarinaMyFakeAPI.service.JsonUtil;
 import com.zebrunner.carina.api.AbstractApiMethodV2;
 import com.zebrunner.carina.api.annotation.Endpoint;
 import com.zebrunner.carina.api.annotation.ResponseTemplatePath;
@@ -8,13 +10,14 @@ import com.zebrunner.carina.api.apitools.builder.NotStringValuesProcessor;
 import com.zebrunner.carina.api.http.HttpMethodType;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
 
-
-@Endpoint(url = "${config.api_url}/products", methodType = HttpMethodType.GET)
-@ResponseTemplatePath(path = "api/get/get_all_product_rs.json")
+@Endpoint(url = "${config.api_url}/products", methodType = HttpMethodType.POST)
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
-public class GetAllProducts extends AbstractApiMethodV2 {
+@ResponseTemplatePath(path = "api/post/add_new_product_rs.json")
+public class AddNewProductMethod extends AbstractApiMethodV2 {
 
-  public GetAllProducts() {
+  public AddNewProductMethod(Product product) {
+    setBodyContent(JsonUtil.toJson(product));
+    addProperty("product", product);
     ignorePropertiesProcessor(NotStringValuesProcessor.class);
   }
 }

@@ -13,9 +13,9 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 @Endpoint(url = "${config.api_url}/products/${id}", methodType = HttpMethodType.DELETE)
 @ResponseTemplatePath(path = "api/delete/delete_product_by_id_rs.json")
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
-public class DeleteProductById extends AbstractApiMethodV2 {
+public class DeleteProductByIdMethod extends AbstractApiMethodV2 {
 
-  public DeleteProductById(Product product) {
+  public DeleteProductByIdMethod(Product product) {
     setBodyContent(JsonUtil.toJson(product));
     addProperty("product", product);
     replaceUrlPlaceholder("id",

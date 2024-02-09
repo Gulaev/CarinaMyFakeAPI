@@ -13,10 +13,10 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 @Endpoint(url = "${config.api_url}/auth/login", methodType = HttpMethodType.POST)
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
 @ResponseTemplatePath(path = "api/post/user_login_rs.json")
-public class UserLogIn extends AbstractApiMethodV2 {
+public class UserLogInMethod extends AbstractApiMethodV2 {
 
 
-  public UserLogIn(User user) {
+  public UserLogInMethod(User user) {
     setBodyContent(JsonUtil.toJson(user));
     ignorePropertiesProcessor(NotStringValuesProcessor.class);
   }

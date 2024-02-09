@@ -13,9 +13,9 @@ public class ProductGetTest {
     for (int i = 0; i < 20; i++) {
       products.add(new Product());
     }
-    GetAllProducts getAllProducts = new GetAllProducts();
-    getAllProducts.callAPIExpectSuccess();
-    getAllProducts.addProperty("products", products);
-    getAllProducts.validateResponse();
+    GetAllProductsMethod getAllProductsMethod = new GetAllProductsMethod();
+    getAllProductsMethod.callAPIExpectSuccess();
+    getAllProductsMethod.addProperty("products", products);
+    getAllProductsMethod.validateResponse();
   }
 }

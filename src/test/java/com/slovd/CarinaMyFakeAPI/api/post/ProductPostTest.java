@@ -14,9 +14,9 @@ public class ProductPostTest {
     product.setImage("Some image");
     product.setPrice(100.00);
     product.setDescription("Some description");
-    AddNewProduct addNewProduct = new AddNewProduct(product);
-    addNewProduct.callAPIExpectSuccess();
-    addNewProduct.validateResponse();
+    AddNewProductMethod addNewProductMethod = new AddNewProductMethod(product);
+    addNewProductMethod.callAPIExpectSuccess();
+    addNewProductMethod.validateResponse();
   }
 
 }

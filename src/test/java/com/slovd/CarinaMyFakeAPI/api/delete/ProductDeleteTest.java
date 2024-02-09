@@ -15,8 +15,8 @@ public class ProductDeleteTest {
     product.setCategory("men's clothing");
     product.setDescription("Your perfect pack for everyday use and walks in the forest. Stash your "
         + "laptop (up to 15 inches) in the padded sleeve, your everyday");
-    DeleteProductById deleteProductById = new DeleteProductById(product);
-    deleteProductById.callAPIExpectSuccess();
-    deleteProductById.validateResponse();
+    DeleteProductByIdMethod deleteProductByIdMethod = new DeleteProductByIdMethod(product);
+    deleteProductByIdMethod.callAPIExpectSuccess();
+    deleteProductByIdMethod.validateResponse();
   }
 }
