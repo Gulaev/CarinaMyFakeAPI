@@ -9,7 +9,6 @@ import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 import org.testng.annotations.Test;
 
 public class CarTest {
@@ -38,19 +37,14 @@ public class CarTest {
 
   @Test
   public void verifyGetCarsByNameTest() {
-    Car car = new Car();
-    car.setId(1);
-    car.setColor("Yellow");
-    car.setName("Mitsubishi");
-    car.setModel("Montero");
-    GetCarsByName getCarsByName = new GetCarsByName(car.getName());
-    getCarsByName.callAPIExpectSuccess();
+    GetCarsByName getCarsByName = new GetCarsByName("Mitsubishi");
     List<Car> cars = new ArrayList<>();
-    if(cars.isEmpty()) {
+    if (cars.isEmpty()) {
       for (int i = 0; i < 37; i++) {
         cars.add(new Car());
       }
     }
+    getCarsByName.callAPIExpectSuccess();
     getCarsByName.addProperty("cars", cars);
     getCarsByName.validateResponse();
   }
