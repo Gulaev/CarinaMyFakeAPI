@@ -14,8 +14,7 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 
 @Endpoint(url = "${config.api_url}/login", methodType = HttpMethodType.POST)
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
-@Header(key = "Content-Type", value = "application/json")
-@ResponseTemplatePath(path = "api/post/login.json")
+@ResponseTemplatePath(path = "api/post/login_rs.json")
 public class LogIn extends AbstractApiMethodV2 {
 
   public LogIn(User user) {

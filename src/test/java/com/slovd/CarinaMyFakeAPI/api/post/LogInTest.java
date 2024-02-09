@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class LogInTest {
 
   @Test
-  public void isLogin() {
+  public void verifyIsUserCanLoginTest() {
     User user = new User();
     user.setUserName("John");
     user.setPassword("Jardani");

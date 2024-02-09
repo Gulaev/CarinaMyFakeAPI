@@ -13,8 +13,7 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 
 @Endpoint(url = "${config.api_url}/signup", methodType = HttpMethodType.POST)
 @SuccessfulHttpStatus(status = HttpResponseStatusType.CREATED_201)
-@Header(key ="Content-Type", value ="application/json")
-@ResponseTemplatePath(path = "api/post/signup.json")
+@ResponseTemplatePath(path = "api/post/signup_rs.json")
 public class SignUp extends AbstractApiMethodV2 {
 
   public SignUp(User user) {

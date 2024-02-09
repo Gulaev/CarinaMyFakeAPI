@@ -10,7 +10,7 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 
 @Endpoint(url = "${config.api_url}/cars/name/${name}", methodType = HttpMethodType.GET)
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
-@ResponseTemplatePath(path = "api/get/get_cars_by_name.json")
+@ResponseTemplatePath(path = "api/get/get_cars_by_name_rs.json")
 public class GetCarsByName extends AbstractApiMethodV2 {
 
   public GetCarsByName(String name) {

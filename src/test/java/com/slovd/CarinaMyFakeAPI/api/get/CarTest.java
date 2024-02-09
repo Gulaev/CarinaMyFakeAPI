@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class CarTest {
 
   @Test
-  public void verifyGetCarByCarId() {
+  public void verifyGetCarByCarIdTest() {
     Car car = new Car();
     car.setId(1);
     car.setColor("Yellow");
@@ -21,8 +21,6 @@ public class CarTest {
     Map<String, Object> carMap = convertObjectToMap(car);
     GetCarById getCarById = new GetCarById("1");
     getCarById.addProperty("car", carMap);
-    getCarById.callAPI();
-
     JsonComparatorContext comparatorContext = JsonComparatorContext.context()
         .<Integer>withPredicate("datePredicate", date -> {
           try {
@@ -36,21 +34,20 @@ public class CarTest {
   }
 
   @Test
-  public void verifyCarsByName() {
+  public void verifyGetCarsByNameTest() {
     Car car = new Car();
     car.setId(1);
     car.setColor("Yellow");
     car.setName("Mitsubishi");
     car.setModel("Montero");
     GetCarsByName getCarsByName = new GetCarsByName(car.getName());
-    getCarsByName.callAPI();
     getCarsByName.callAPIExpectSuccess();
+    getCarsByName.validateResponse();
   }
 
-  public Map<String, Object> convertObjectToMap(Object obj) {
+  private Map<String, Object> convertObjectToMap(Object obj) {
     ObjectMapper objectMapper = new ObjectMapper();
     return objectMapper.convertValue(obj, new TypeReference<Map<String, Object>>() {
     });
   }
-
 }

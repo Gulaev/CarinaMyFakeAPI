@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class SignUpTest {
 
   @Test
-  public void isCanSignup() {
+  public void verifyIfUserCanSignupTest() {
     User user = new User();
     user.setFirstName("luffy");
     user.setLastName("Monkey");

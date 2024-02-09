@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class ContactusTest {
 
   @Test
-  public void isCanContactus() {
+  public void verifyIsCanContactusTest() {
     User user = new User();
     user.setFirstName("Jardani");
     user.setLastName("Jovonovich");

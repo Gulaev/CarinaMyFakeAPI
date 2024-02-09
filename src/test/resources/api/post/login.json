@@ -1,8 +1,0 @@
-{
-  "userDetails": {
-    "userName": "${user.userName}",
-    "password": "${user.password}",
-    "verified": true
-  },
-  "session": "type:String"
-}
