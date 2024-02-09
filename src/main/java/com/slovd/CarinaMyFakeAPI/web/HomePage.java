@@ -12,6 +12,7 @@ public class HomePage extends AbstractPage {
 
   public HomePage(WebDriver driver) {
     super(driver);
+    setUiLoadedMarker(header.getSearchFormComponent().getSearchInput());
   }
 
   public Header getHeader() {

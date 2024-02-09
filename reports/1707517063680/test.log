@@ -1,0 +1,36 @@
+[2024-02-09 10:17:43] [1] [INFO] [TestNG] Running:
+  /Users/denisgulaev/Library/Caches/JetBrains/IntelliJIdea2022.1/temp-testng-customsuite.xml
+
+[2024-02-09 10:17:45] [1] [INFO] Request method:	POST
+Request URI:	https://fakestoreapi.com/auth/login
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:
+{
+    "userName": "mor_2314",
+    "password": "83r5^_"
+}
+HTTP/1.1 400 Bad Request
+Date: Fri, 09 Feb 2024 22:17:44 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+X-Powered-By: Express
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vEGRu7Eg1432ElKNbPKWvMemsUAxZxhm9Fe7wmz6ql%2FyWPB%2B6wDVyjwwBHmLo2BrROygY2IXFyt1KwRNMDfTybJ6SwTZlwrHfes6tCaD%2B8KNlLF9cJytbi7Iux7oZxoK893r"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 852f7bf62f1b5b43-VIE
+alt-svc: h3=":443"; ma=86400
+
+<html>
+  <body>username and password are not provided in JSON format</body>
+</html>
+

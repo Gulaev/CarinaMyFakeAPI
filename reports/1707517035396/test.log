@@ -1,0 +1,45 @@
+[2024-02-09 10:17:15] [1] [INFO] [TestNG] Running:
+  /Users/denisgulaev/Library/Caches/JetBrains/IntelliJIdea2022.1/temp-testng-customsuite.xml
+
+[2024-02-09 10:17:17] [1] [INFO] Request method:	POST
+Request URI:	https://fakestoreapi.com/login
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:
+{
+    "userName": "mor_2314",
+    "password": "83r5^_"
+}
+HTTP/1.1 404 Not Found
+Date: Fri, 09 Feb 2024 22:17:16 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src 'none'
+X-Content-Type-Options: nosniff
+X-Powered-By: Express
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=17C2gfrcWDO4cNHjmUUaHMub%2FX2XZyGIAOvLrT5QyOKLKSy4Jf05T0aSUKsBMk68lW8e4PFFfwwR%2B5HorcGzVHZqYhxxbWUiuj5erwzvn87VeLeumzvsffoADW1qt3WaQ3Hz"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 852f7b453fcb5adb-VIE
+Content-Encoding: gzip
+alt-svc: h3=":443"; ma=86400
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Error</title>
+  </head>
+  <body>
+    <pre>Cannot POST /login</pre>
+  </body>
+</html>
+

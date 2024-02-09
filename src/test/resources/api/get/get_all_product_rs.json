@@ -1,0 +1,16 @@
+[
+  <#list products as product>
+  {
+    id: "type:Integer",
+    title: "type:String",
+    price: "type:Integer",
+    category: "type:String",
+    description: "type:String",
+    image: "type:String",
+    rating: {
+      "rate":"skip",
+      "count":"skip"
+    }
+  }<#if product?has_next>,</#if>
+  </#list>
+]
