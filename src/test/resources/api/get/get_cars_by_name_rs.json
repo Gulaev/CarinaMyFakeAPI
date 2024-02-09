@@ -1,6 +1,6 @@
 {
   "Cars": [
-    <#list Cars as car>
+    <#list cars as car>
     {
       "id": "type:Integer",
       "car": "type:String",
