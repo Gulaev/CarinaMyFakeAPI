@@ -1,7 +1,6 @@
 package com.slovd.CarinaMyFakeAPI.web;
 
 import com.slovd.CarinaMyFakeAPI.web.components.ProductCardComponent;
-import com.slovd.CarinaMyFakeAPI.web.components.checkoutPage.CheckoutDeliveryBlockItemComponent;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import java.util.List;
@@ -24,9 +23,6 @@ public class SearchPage extends AbstractPage {
 
   @FindBy(xpath = "//button[@data-qaid='accept_price']")
   private ExtendedWebElement okayPriceFilterButton;
-
-  @FindBy(xpath = ".//li[@data-testid='list_item']")
-  private List<CheckoutDeliveryBlockItemComponent> deliveryChoiceItems;
 
   public SearchPage(WebDriver driver) {
     super(driver);

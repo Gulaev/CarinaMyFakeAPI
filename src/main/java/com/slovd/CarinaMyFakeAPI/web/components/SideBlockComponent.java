@@ -24,7 +24,7 @@ public class SideBlockComponent extends AbstractUIObject {
   }
 
   public boolean isShoppingCardEmpty() {
-    return returnToShoppingButton.isElementPresent();
+    return !returnToShoppingButton.isElementPresent();
   }
 
   public List<SideBlockCardItemComponent> getSideBlockCardItemComponents() {

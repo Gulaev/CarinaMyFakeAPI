@@ -13,10 +13,10 @@ public class HeaderComponent extends AbstractUIObject {
   @FindBy(xpath = ".//button[@data-qaid='shopping_cart']")
   private ExtendedWebElement shoppingCartIcon;
 
-  @FindBy(xpath = ".//*[@data-qaid='search_form'].//input[@type='search']")
+  @FindBy(xpath = ".//*[@data-qaid='search_form']//input[@type='search']")
   private ExtendedWebElement searchInput;
 
-  @FindBy(xpath = ".//*[@data-qaid='search_form'].//*[@type='submit']")
+  @FindBy(xpath = ".//*[@data-qaid='search_form']//*[@type='submit']")
   private ExtendedWebElement searchButton;
 
   public SideBlockComponent clickToShoppingCart() {

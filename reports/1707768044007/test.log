@@ -1,0 +1,10 @@
+[2024-02-12 08:00:44] [1] [INFO] 
+=========== WebDriver configuration ===========
+url=https://prom.ua/
+browser=chrome
+selenium_url=http://localhost:4444/wd/hub
+page_opening_strategy=BY_ELEMENT
+-------------- Driver capabilities ------------
+===============================================
+
+[2024-02-12 08:00:44] [1] [WARN] Reporting disabled: using no op test run registrar

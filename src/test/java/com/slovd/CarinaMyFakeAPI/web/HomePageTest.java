@@ -2,7 +2,9 @@ package com.slovd.CarinaMyFakeAPI.web;
 
 import com.slovd.CarinaMyFakeAPI.web.components.HeaderComponent;
 import com.slovd.CarinaMyFakeAPI.web.components.ProductCardComponent;
+import com.slovd.CarinaMyFakeAPI.web.components.homePage.CategoriesComponent;
 import com.zebrunner.carina.core.AbstractTest;
+import com.zebrunner.carina.utils.R;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import java.util.List;
 import org.testng.Assert;
@@ -11,33 +13,39 @@ import org.testng.asserts.SoftAssert;
 
 public class HomePageTest extends AbstractTest {
 
+  private final static String SEARCH_INPUT = R.TESTDATA.get("searchInput");
+
   @Test(testName = "")
   public void verifyHomepageLoad() {
+    SoftAssert softAssert = new SoftAssert();
     HomePage homePage = new HomePage(getDriver());
     homePage.open();
-    Assert.assertTrue(homePage.isPageOpened());
-    ExtendedWebElement promUALogo = homePage.getPromUALogo();
-    promUALogo.click();
+    softAssert.assertTrue(homePage.isPageOpened(), "Home page is not opened");
+    CategoriesComponent categories = homePage.getCategories();
+    categories.getCategoryUiElement().hover();
+    categories.getCategories().get(0);
+    homePage.clickPromUALogo();
+    softAssert.assertTrue(getDriver().getCurrentUrl().equals(homePage.getCurrentUrl()));
     System.out.println();
   }
 
 
   @Test(testName = "")
   public void verifySearchFunctionality() {
-    SoftAssert sa = new SoftAssert();
+    SoftAssert softAssert = new SoftAssert();
     HomePage homePage = new HomePage(getDriver());
     homePage.open();
-    sa.assertTrue(homePage.isPageOpened(), "Home page is not opened");
+    softAssert.assertTrue(homePage.isPageOpened(), "Home page is not opened");
     HeaderComponent headerComponent = homePage.getHeader();
-    sa.assertTrue(headerComponent.getSearchInput().isElementPresent(),
+    softAssert.assertTrue(headerComponent.getSearchInput().isElementPresent(),
         "Input search name not found");
-    sa.assertTrue(headerComponent.getSearchButton().isElementPresent(),
+    softAssert.assertTrue(headerComponent.getSearchButton().isElementPresent(),
         "Button submit nut found");
-    headerComponent.typeSearchInputValue("IPhone");
+    headerComponent.typeSearchInputValue(SEARCH_INPUT);
     SearchPage searchPage = headerComponent.clickSearchButton();
-    sa.assertTrue(searchPage.isPageOpened(), "Search page is not open");
+    softAssert.assertTrue(searchPage.isPageOpened(), "Search page is not open");
     List<ProductCardComponent> items = searchPage.getProductItems();
-    sa.assertTrue(items.isEmpty(), "Items is not present by this request");
+    softAssert.assertTrue(items.isEmpty(), "Items is not present by this request");
     String titleText;
     String itemText;
 
@@ -45,9 +53,9 @@ public class HomePageTest extends AbstractTest {
       titleText = productCardComponent.getTitleText();
       itemText = searchPage.getSearchElementTitleText();
       boolean containsSearchTerm = titleText.toLowerCase().contains(itemText.toLowerCase());
-      sa.assertTrue(containsSearchTerm,
+      softAssert.assertTrue(containsSearchTerm,
           "The title text does not contain the expected item text.");
     }
-    sa.assertAll();
+    softAssert.assertAll();
   }
 }
