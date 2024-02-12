@@ -1,25 +1,42 @@
 <h2>Test Case 1: Homepage Load Verification</h2>
 <p><strong>Action:</strong> Open the browser and navigate to https://prom.ua/ - <strong>Expected Result:</strong> The homepage is opened, the logo and other key elements are present.</p>
-<p><strong>Action:</strong> Ensure that the main navigation menu is visible - <strong>Expected Result:</strong> The navigation menu is present and all main categories are displayed.</p>
-<p><strong>Action:</strong> Scroll to the bottom of the homepage - <strong>Expected Result:</strong> Footer section is visible with contact information, additional links, and social media icons.</p>
+<p><strong>Action:</strong> Ensure that the main header is visible - <strong>Expected Result:</strong> The header is present and prom logo are available.</p>
+<p><strong>Action:</strong> Click to prom logo - <strong>Expected Result:</strong> Url is not change and user in https://prom.ua/</p>
 
 <h2>Test Case 2: Search Functionality</h2>
 <p><strong>Action:</strong> Open the browser and navigate to https://prom.ua/ - <strong>Expected Result:</strong> The homepage is opened.</p>
-<p><strong>Action:</strong> Locate the search bar and enter "iPhone" - <strong>Expected Result:</strong> The search suggestion dropdown appears with related search terms.</p>
+<p><strong>Action:</strong> Locate the search bar and enter "iPhone" - <strong>Expected Result:</strong> "IPhone" appeared in the search bar. </p>
 <p><strong>Action:</strong> Submit the search - <strong>Expected Result:</strong> The search results page opens with "iPhone" products listed.</p>
 
-<h2>Test Case 3: Product Selection and Detail Viewing</h2>
+<h2>Test Case 3: Product Add to Cart Functionality</h2>
 <p><strong>Action:</strong> Open the browser and navigate to https://prom.ua/ - <strong>Expected Result:</strong> The homepage is opened.</p>
-<p><strong>Action:</strong> Use the search bar to search for "iPhone" and select a product - <strong>Expected Result:</strong> Product detail page opens with images, prices, descriptions, and reviews displayed.</p>
-<p><strong>Action:</strong> On the product detail page, verify the availability of the 'Add to Wishlist' button - <strong>Expected Result:</strong> 'Add to Wishlist' button is present and clickable.</p>
+<p><strong>Action:</strong> Locate the search bar and enter "iPhone" - <strong>Expected Result:</strong> "IPhone" appeared in the search bar. </p>
+<p><strong>Action:</strong> Submit the search - <strong>Expected Result:</strong> The search results page opens with "iPhone" products listed.</p>
+<p><strong>Action:</strong> Chose the first item and push "Add to Cart" button - <strong>Expected Result:</strong> 'Add to Cart' button is present and clickable.</p>
+<p><strong>Action:</strong> Click to "Cart" button - <strong>Expected Result:</strong> A menu opens on the right with the same product that the user selected </p>
 
 <h2>Test Case 4: Checkout Process</h2>
-<p><strong>Action:</strong> Open the browser and navigate to https://prom.ua/ and add a product to the cart - <strong>Expected Result:</strong> The product is added to the cart, and cart count is incremented.</p>
-<p><strong>Action:</strong> Navigate to the cart by clicking the cart icon - <strong>Expected Result:</strong> The cart page is opened showing the list of added items.</p>
-<p><strong>Action:</strong> Click on the 'Proceed to Checkout' button - <strong>Expected Result:</strong> The checkout process is initiated and the user is prompted to enter their details.</p>
+<p><strong>Action:</strong> Open the browser and navigate to https://prom.ua/ - <strong>Expected Result:</strong> The homepage is opened.</p>
+<p><strong>Action:</strong> Locate the search bar and enter "iPhone" - <strong>Expected Result:</strong> "IPhone" appeared in the search bar. </p>
+<p><strong>Action:</strong> Submit the search - <strong>Expected Result:</strong> The search results page opens with "iPhone" products listed.</p>
+<p><strong>Action:</strong> Chose the first item and push "Add to Cart" button - <strong>Expected Result:</strong> 'Add to Cart' button is present and clickable.</p>
+<p><strong>Action:</strong> Click to "Cart" button - <strong>Expected Result:</strong> A menu opens on the right with the same product that the user selected </p>
+<p><strong>Action:</strong> Click on the 'Proceed to Checkout' button - <strong>Expected Result:</strong> The checkout process is initiated and open checkout page.</p>
 
 <h2>Test Case 5: Placing an Order</h2>
-<p><strong>Action:</strong> Open the browser and navigate to https://prom.ua/, add a product to the cart, and go to the checkout page - <strong>Expected Result:</strong> The user is on the checkout page ready to place an order.</p>
-<p><strong>Action:</strong> Fill in all required shipping and payment details - <strong>Expected Result:</strong> All details are accepted and the 'Place Order' button becomes clickable.</p>
-<p><strong>Action:</strong> Click on 'Place Order' - <strong>Expected Result:</strong> An order confirmation page opens with a summary of the order, and an SMS verification code is sent to the user's phone.</p>
-Make sure that for each test case, the website is being opened anew to 
+<p><strong>Action:</strong> Open the browser and navigate to https://prom.ua/ - <strong>Expected Result:</strong> The homepage is opened.</p>
+<p><strong>Action:</strong> Locate the search bar and enter "iPhone" - <strong>Expected Result:</strong> "IPhone" appeared in the search bar. </p>
+<p><strong>Action:</strong> Submit the search - <strong>Expected Result:</strong> The search results page opens with "iPhone" products listed.</p>
+<p><strong>Action:</strong> Chose the first item and push "Add to Cart" button - <strong>Expected Result:</strong> 'Add to Cart' button is present and clickable.</p>
+<p><strong>Action:</strong> Click to "Cart" button - <strong>Expected Result:</strong> A menu opens on the right with the same product that the user selected </p>
+<p><strong>Action:</strong> Click on the 'Proceed to Checkout' button - <strong>Expected Result:</strong> The checkout process is initiated and open checkout page.</p>
+<p><strong>Action:</strong> Input phone number - <strong>Expected Result:</strong> Number appeared in the number path </p>
+<p><strong>Action:</strong> Input fist name - <strong>Expected Result:</strong> First name appeared in the first name path </p>
+<p><strong>Action:</strong> Input last name - <strong>Expected Result:</strong> Last name appeared in the last name path </p>
+<p><strong>Action:</strong> Click to "Done" button - <strong>Expected Result:</strong> Personal information added </p>
+<p><strong>Action:</strong> Click to "Нова Пошта" button to choice delivery company - <strong>Expected Result:</strong> Open "Нова Пошта" dialog menu</p>
+<p><strong>Action:</strong> Click to "Kiev" link - <strong>Expected Result:</strong> Open dialog menu with address departments</p>
+<p><strong>Action:</strong> Click to first address of department - <strong>Expected Result:</strong> Dialog is closed and data accepted</p>
+<p><strong>Action:</strong> Click to "After Pay" button - <strong>Expected Result:</strong> Button accepted </p>
+<p><strong>Action:</strong> Click to "After Pay" button - <strong>Expected Result:</strong> Button accepted </p>
+<p><strong>Action:</strong> Click to "Order" button - <strong>Expected Result:</strong> A menu opens on the right with verification with CMC code </p>
