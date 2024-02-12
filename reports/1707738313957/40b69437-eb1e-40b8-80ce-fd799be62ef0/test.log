@@ -1,0 +1,10 @@
+[2024-02-12 11:45:15] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-12 11:45:15] [1] [INFO] TEST [CarinaMyFakeAPI - verifyProductSelectionAndDetailViewingTest] STARTED at [13:45:15 2024-02-12]
+[2024-02-12 11:45:15] [1] [INFO] Starting driver session...
+[2024-02-12 11:45:16] [1] [INFO] Driver session started.
+[2024-02-12 11:45:17] [1] [INFO] INFO: opening url 'https://prom.ua/'
+[2024-02-12 11:45:22] [1] [INFO] Element 'searchInput' is clicked.
+[2024-02-12 11:45:22] [1] [INFO] Keys 'IPhone' are sent to element 'searchInput'.
+[2024-02-12 11:45:23] [1] [INFO] Element 'searchButton' is clicked.
+[2024-02-12 11:45:26] [1] [INFO] Element 'addToCardButton' is clicked.
+[2024-02-12 11:45:26] [1] [INFO] Element 'shoppingCartIcon' is clicked.
