@@ -36,7 +36,7 @@ public class HomePageTest extends AbstractTest {
     headerComponent.typeSearchInputValue("IPhone");
     SearchPage searchPage = headerComponent.clickSearchButton();
     sa.assertTrue(searchPage.isPageOpened(), "Search page is not open");
-    List<ProductCardComponent> items = searchPage.getItems();
+    List<ProductCardComponent> items = searchPage.getProductItems();
     sa.assertTrue(items.isEmpty(), "Items is not present by this request");
     String titleText;
     String itemText;

@@ -28,7 +28,7 @@ public class SearchPageTest extends AbstractTest {
     sa.assertEquals(searchTitle, "iphone",
         String.format("Incorrect search title name %s", searchTitle));
     sa.assertTrue(getDriver().getCurrentUrl().contains(searchTitle));
-    List<ProductCardComponent> items = searchPage.getItems();
+    List<ProductCardComponent> items = searchPage.getProductItems();
     sa.assertTrue(items.isEmpty(),
         String.format("Items in search page not present by this request %s", searchTitle));
     ProductCardComponent firstItem = items.get(0);
