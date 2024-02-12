@@ -19,15 +19,15 @@ public class SideBlockComponent extends AbstractUIObject {
   @FindBy(xpath = ".//li[@data-testid='cart_block']")
   private List<SideBlockCardItemComponent> sideBlockCardItemComponents;
 
+  public ExtendedWebElement getReturnToShoppingButton() {
+    return returnToShoppingButton;
+  }
+
   public boolean isShoppingCardEmpty() {
     return returnToShoppingButton.isElementPresent();
   }
 
   public List<SideBlockCardItemComponent> getSideBlockCardItemComponents() {
     return sideBlockCardItemComponents;
-  }
-
-  public ExtendedWebElement getReturnToShoppingButton() {
-    return returnToShoppingButton;
   }
 }

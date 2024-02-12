@@ -15,6 +15,15 @@ public class SearchPage extends AbstractPage {
   @FindBy(xpath = "//*[@data-qaid='breadcrumbs_seo_item']//span")
   private ExtendedWebElement searchElementTitle;
 
+  @FindBy(xpath = "//input[@id=':catalog-ui-r5q:']")
+  private ExtendedWebElement pricePerFilterField;
+
+  @FindBy(xpath = "//input[@id=':catalog-ui-r5r:']")
+  private ExtendedWebElement priceToUpFilterField;
+
+  @FindBy(xpath = "//button[@data-qaid='accept_price']")
+  private ExtendedWebElement okayPriceFilterButton;
+
   public SearchPage(WebDriver driver) {
     super(driver);
     setUiLoadedMarker(searchElementTitle);

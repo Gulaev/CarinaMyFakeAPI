@@ -1,29 +1,28 @@
 package com.slovd.CarinaMyFakeAPI.web;
 
+import com.slovd.CarinaMyFakeAPI.web.components.HeaderComponent;
 import com.slovd.CarinaMyFakeAPI.web.components.ProductCardComponent;
-import com.slovd.CarinaMyFakeAPI.web.components.SearchFormComponent;
 import com.slovd.CarinaMyFakeAPI.web.components.SideBlockCardItemComponent;
 import com.slovd.CarinaMyFakeAPI.web.components.SideBlockComponent;
 import com.zebrunner.carina.core.AbstractTest;
-import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import java.util.List;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class SearchPageTest extends AbstractTest {
 
-  @Test
+  @Test(testName = "")
   public void verifyProductSelectionAndDetailViewingTest() {
     SoftAssert sa = new SoftAssert();
     HomePage homePage = new HomePage(getDriver());
     homePage.open();
     sa.assertTrue(homePage.isPageOpened(), "Home page is not open");
-    SearchFormComponent searchForm = homePage.getHeader().getSearchFormComponent();
-    sa.assertTrue(searchForm.getSearchInput().isElementPresent(), "Input search name not found");
-    sa.assertTrue(searchForm.getSearchButton().isElementPresent(), "Button submit nut found");
-    searchForm.typeSearchInputValue("IPhone");
-    SearchPage searchPage = searchForm.clickSearchButton();
+    HeaderComponent headerComponent = homePage.getHeader();
+    sa.assertTrue(headerComponent.getSearchInput().isElementPresent(),
+        "Input search name not found");
+    sa.assertTrue(headerComponent.getSearchButton().isElementPresent(), "Button submit nut found");
+    headerComponent.typeSearchInputValue("IPhone");
+    SearchPage searchPage = headerComponent.clickSearchButton();
     sa.assertTrue(searchPage.isPageOpened(), "Search page is not open");
     String searchTitle = searchPage.getSearchElementTitleText().toLowerCase();
     sa.assertEquals(searchTitle, "iphone",
@@ -49,5 +48,4 @@ public class SearchPageTest extends AbstractTest {
     sa.assertEquals(size, 1, "Shopping cart dont have elements");
     sa.assertAll();
   }
-
 }

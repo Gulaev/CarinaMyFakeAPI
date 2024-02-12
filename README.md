@@ -1,23 +1,23 @@
 <h2>Test Case 1: Homepage Load Verification</h2>
-<p><strong>Action:</strong> Open the browser and navigate to https://prom.ua/ - <strong>Expected Result:</strong> The homepage is opened, the logo and other key elements are present.</p>
-<p><strong>Action:</strong> Ensure that the main header is visible - <strong>Expected Result:</strong> The header is present and prom logo are available.</p>
-<p><strong>Action:</strong> Click to prom logo - <strong>Expected Result:</strong> Url is not change and user in https://prom.ua/</p>
+<p><strong>Action:</strong> Open the browser and navigate to https://prom.ua/ - <strong>Expected Result:</strong> The homepage is opened, the logo and categories are present.</p>
+<p><strong>Action:</strong> Click to first category - <strong>Expected Result:</strong> Open search page by this category</p>
+<p><strong>Action:</strong> Click to prom logo - <strong>Expected Result:</strong> Open https://prom.ua/</p>
 
 <h2>Test Case 2: Search Functionality</h2>
 <p><strong>Action:</strong> Open the browser and navigate to https://prom.ua/ - <strong>Expected Result:</strong> The homepage is opened.</p>
-<p><strong>Action:</strong> Locate the search bar and enter "iPhone" - <strong>Expected Result:</strong> "IPhone" appeared in the search bar. </p>
+<p><strong>Action:</strong> Input to the search bar "iPhone" - <strong>Expected Result:</strong> "IPhone" appeared in the search bar. </p>
 <p><strong>Action:</strong> Submit the search - <strong>Expected Result:</strong> The search results page opens with "iPhone" products listed.</p>
 
-<h2>Test Case 3: Product Add to Cart Functionality</h2>
+<h2>Test Case 3: Filter Functionality</h2>
 <p><strong>Action:</strong> Open the browser and navigate to https://prom.ua/ - <strong>Expected Result:</strong> The homepage is opened.</p>
-<p><strong>Action:</strong> Locate the search bar and enter "iPhone" - <strong>Expected Result:</strong> "IPhone" appeared in the search bar. </p>
-<p><strong>Action:</strong> Submit the search - <strong>Expected Result:</strong> The search results page opens with "iPhone" products listed.</p>
-<p><strong>Action:</strong> Chose the first item and push "Add to Cart" button - <strong>Expected Result:</strong> 'Add to Cart' button is present and clickable.</p>
-<p><strong>Action:</strong> Click to "Cart" button - <strong>Expected Result:</strong> A menu opens on the right with the same product that the user selected </p>
+<p><strong>Action:</strong> Click to first category - <strong>Expected Result:</strong> Open search page by this category</p>
+<p><strong>Action:</strong> Input "Ціна від" - <strong>Expected Result:</strong> "Ціна від" appeared in the input field</p>
+<p><strong>Action:</strong> Input "Ціна до" - <strong>Expected Result:</strong> "Ціна до" appeared in the input field</p>
+<p><strong>Action:</strong> Click to "Ok" - <strong>Expected Result:</strong> Open search page with this category and filters</p>
 
 <h2>Test Case 4: Checkout Process</h2>
 <p><strong>Action:</strong> Open the browser and navigate to https://prom.ua/ - <strong>Expected Result:</strong> The homepage is opened.</p>
-<p><strong>Action:</strong> Locate the search bar and enter "iPhone" - <strong>Expected Result:</strong> "IPhone" appeared in the search bar. </p>
+<p><strong>Action:</strong> Input to the search bar "iPhone" - <strong>Expected Result:</strong> "IPhone" appeared in the search bar. </p>
 <p><strong>Action:</strong> Submit the search - <strong>Expected Result:</strong> The search results page opens with "iPhone" products listed.</p>
 <p><strong>Action:</strong> Chose the first item and push "Add to Cart" button - <strong>Expected Result:</strong> 'Add to Cart' button is present and clickable.</p>
 <p><strong>Action:</strong> Click to "Cart" button - <strong>Expected Result:</strong> A menu opens on the right with the same product that the user selected </p>
