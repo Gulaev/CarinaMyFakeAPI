@@ -10,15 +10,15 @@ import org.openqa.selenium.support.FindBy;
 
 public class SideBlockComponent extends AbstractUIObject {
 
-  public SideBlockComponent(WebDriver driver, SearchContext searchContext) {
-    super(driver, searchContext);
-  }
-
   @FindBy(xpath = ".//div[@data-qaid='sc_side_block']")
   public ExtendedWebElement returnToShoppingButton;
 
   @FindBy(xpath = ".//li[@data-testid='cart_block']")
   private List<SideBlockCardItemComponent> sideBlockCardItemComponents;
+
+  public SideBlockComponent(WebDriver driver, SearchContext searchContext) {
+    super(driver, searchContext);
+  }
 
   public boolean isShoppingCardEmpty() {
     return !returnToShoppingButton.isElementPresent();

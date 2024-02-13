@@ -19,14 +19,17 @@ public class HeaderComponent extends AbstractUIObject {
   @FindBy(xpath = ".//*[@data-qaid='search_form']//*[@type='submit']")
   private ExtendedWebElement searchButton;
 
-  public SideBlockComponent clickToShoppingCart() {
-    shoppingCartIcon.click();
-    return new HomePage(getDriver()).getSideBlock();
-  }
+  @FindBy(xpath = ".//img[@alt='prom']")
+  private ExtendedWebElement promUALogo;
 
   public HeaderComponent(WebDriver driver, SearchContext searchContext) {
     super(driver, searchContext);
     setUiLoadedMarker(shoppingCartIcon);
+  }
+
+  public SideBlockComponent clickToShoppingCart() {
+    shoppingCartIcon.click();
+    return new HomePage(getDriver()).getSideBlock();
   }
 
   public SearchPage clickSearchButton() {
@@ -35,19 +38,29 @@ public class HeaderComponent extends AbstractUIObject {
   }
 
   public void typeSearchInputValue(String value) {
-    searchInput.clickIfPresent();
     searchInput.type(value);
+  }
+
+  public boolean isSearchInputPresent() {
+    return searchInput.isElementPresent();
+  }
+
+  public boolean isSearchButtonPresent() {
+    return searchButton.isElementPresent();
+  }
+
+  public HomePage clickPromUALogo() {
+    promUALogo.click();
+    return new HomePage(getDriver());
   }
 
   public ExtendedWebElement getSearchInput() {
     return searchInput;
   }
 
-  public ExtendedWebElement getSearchButton() {
-    return searchButton;
-  }
-
-  public ExtendedWebElement getShoppingCartIcon() {
-    return shoppingCartIcon;
+  public SearchPage searchingByQuery(String query) {
+    searchInput.type(query);
+    searchButton.click();
+    return new SearchPage(getDriver());
   }
 }

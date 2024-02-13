@@ -2,13 +2,12 @@ package com.slovd.CarinaMyFakeAPI.web.components.checkoutPage;
 
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
-import java.time.Duration;
+import java.util.List;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CheckoutContactBlockComponent extends AbstractUIObject {
 
@@ -23,6 +22,9 @@ public class CheckoutContactBlockComponent extends AbstractUIObject {
 
   @FindBy(xpath = ".//button[@data-testid='save_btn']")
   private ExtendedWebElement submitButton;
+
+  @FindBy(xpath = ".//*[@data-testid='input_field_correct_value']")
+  private List<ExtendedWebElement> acceptedDataInInputs;
 
   public CheckoutContactBlockComponent(WebDriver driver, SearchContext searchContext) {
     super(driver, searchContext);
@@ -44,8 +46,11 @@ public class CheckoutContactBlockComponent extends AbstractUIObject {
   }
 
   public void clickSubmitButton() {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    wait.until(ExpectedConditions.elementToBeClickable(submitButton.getElement()));
+    waitUntil(ExpectedConditions.elementToBeClickable(submitButton.getElement()), 10);
     submitButton.click();
+  }
+
+  public boolean validateAllDataInInputAccepted() {
+    return acceptedDataInInputs.size() == 3;
   }
 }
