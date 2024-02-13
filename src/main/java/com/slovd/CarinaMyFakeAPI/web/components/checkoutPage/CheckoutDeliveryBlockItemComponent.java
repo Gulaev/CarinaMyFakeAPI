@@ -1,6 +1,6 @@
 package com.slovd.CarinaMyFakeAPI.web.components.checkoutPage;
 
-import com.slovd.CarinaMyFakeAPI.web.CheckoutPage;
+import com.slovd.CarinaMyFakeAPI.web.page.CheckoutPage;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
 import java.util.List;
@@ -30,13 +30,13 @@ public class CheckoutDeliveryBlockItemComponent extends AbstractUIObject {
     setUiLoadedMarker(submitButton);
   }
 
-  public List<ExtendedWebElement> clickToChoseLocationDepartmentButton() {
+  public List<ExtendedWebElement> clickToGetLocationDepartmentsButtons() {
     choseLocationDepartmentButton.click();
     return new CheckoutPage(getDriver()).getDepartmentsLocations();
   }
 
-  public String getDeliveryMethodName() {
-    return deliveryCompanyButton.getText();
+  public List<ExtendedWebElement> getDeliveryCityButtons() {
+    return deliveryCityButtons;
   }
 
   public void clickToChoseDeliveryMethod() {

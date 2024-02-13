@@ -1,7 +1,7 @@
 package com.slovd.CarinaMyFakeAPI.web.components;
 
-import com.slovd.CarinaMyFakeAPI.web.HomePage;
-import com.slovd.CarinaMyFakeAPI.web.SearchPage;
+import com.slovd.CarinaMyFakeAPI.web.page.HomePage;
+import com.slovd.CarinaMyFakeAPI.web.page.SearchPage;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
 import org.openqa.selenium.SearchContext;

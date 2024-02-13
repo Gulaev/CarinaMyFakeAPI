@@ -1,11 +1,10 @@
-package com.slovd.CarinaMyFakeAPI.web;
+package com.slovd.CarinaMyFakeAPI.web.page;
 
 import com.slovd.CarinaMyFakeAPI.web.components.HeaderComponent;
 import com.slovd.CarinaMyFakeAPI.web.components.SideBlockComponent;
 import com.slovd.CarinaMyFakeAPI.web.components.homePage.CategoriesComponent;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
-import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 

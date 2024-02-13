@@ -1,5 +1,6 @@
 package com.slovd.CarinaMyFakeAPI.web.components;
 
+import com.slovd.CarinaMyFakeAPI.web.components.homePage.SideBlockCardItemComponent;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
 import java.util.List;
@@ -18,10 +19,6 @@ public class SideBlockComponent extends AbstractUIObject {
 
   @FindBy(xpath = ".//li[@data-testid='cart_block']")
   private List<SideBlockCardItemComponent> sideBlockCardItemComponents;
-
-  public ExtendedWebElement getReturnToShoppingButton() {
-    return returnToShoppingButton;
-  }
 
   public boolean isShoppingCardEmpty() {
     return !returnToShoppingButton.isElementPresent();

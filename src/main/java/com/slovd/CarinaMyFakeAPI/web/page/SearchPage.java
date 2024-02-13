@@ -1,4 +1,4 @@
-package com.slovd.CarinaMyFakeAPI.web;
+package com.slovd.CarinaMyFakeAPI.web.page;
 
 import com.slovd.CarinaMyFakeAPI.web.components.ProductCardComponent;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
@@ -15,18 +15,37 @@ public class SearchPage extends AbstractPage {
   @FindBy(xpath = "//*[@data-qaid='breadcrumbs_seo_item']//span")
   private ExtendedWebElement searchElementTitle;
 
-  @FindBy(xpath = "//input[@id=':catalog-ui-r5q:']")
+  @FindBy(xpath = "//div[@data-qaid='price_local__gte']//input")
   private ExtendedWebElement pricePerFilterField;
 
-  @FindBy(xpath = "//input[@id=':catalog-ui-r5r:']")
+  @FindBy(xpath = "//div[@data-qaid='price_local__lte']//input")
   private ExtendedWebElement priceToUpFilterField;
 
   @FindBy(xpath = "//button[@data-qaid='accept_price']")
-  private ExtendedWebElement okayPriceFilterButton;
+  private ExtendedWebElement submitPriceFilterButton;
+
+  @FindBy(xpath = "//*[@data-qatype='checked_price_local']")
+  private ExtendedWebElement priceRangeFilterButton;
 
   public SearchPage(WebDriver driver) {
     super(driver);
     setUiLoadedMarker(searchElementTitle);
+  }
+
+  public boolean isFilterAccepted() {
+    return priceRangeFilterButton.isElementPresent();
+  }
+
+  public void typePricePerFilterField(String value) {
+    pricePerFilterField.type(value);
+  }
+
+  public void typePriceToUpFilterField(String value) {
+    priceToUpFilterField.type(value);
+  }
+
+  public void clickSubmitPriceFilterButton() {
+    submitPriceFilterButton.click();
   }
 
   public String getSearchElementTitleText() {

@@ -11,6 +11,9 @@ public class ProductCardComponent extends AbstractUIObject {
   @FindBy(xpath = ".//span[@data-qaid='product_name']")
   private ExtendedWebElement titleElement;
 
+  @FindBy(xpath = ".//div[@data-qaid='product_price']")
+  private ExtendedWebElement price;
+
   @FindBy(xpath = ".//a[@type='button']")
   private ExtendedWebElement addToCardButton;
 
@@ -27,12 +30,13 @@ public class ProductCardComponent extends AbstractUIObject {
     addToCardButton.click();
   }
 
-  public ExtendedWebElement getTitleElement() {
-    return titleElement;
-  }
-
-
-  public String getCssValueOfAddToCardButton(String propertyName) {
-    return addToCardButton.getCssValue(propertyName);
+  public int getPrice() {
+    String attribute = price.getAttribute("data-qaprice");
+    try {
+      double priceValue = Double.parseDouble(attribute);
+      return (int) Math.round(priceValue);
+    } catch (NumberFormatException e) {
+      throw new RuntimeException("Failed to parse the price value: " + attribute, e);
+    }
   }
 }

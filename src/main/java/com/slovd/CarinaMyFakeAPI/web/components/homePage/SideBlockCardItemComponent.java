@@ -1,6 +1,6 @@
-package com.slovd.CarinaMyFakeAPI.web.components;
+package com.slovd.CarinaMyFakeAPI.web.components.homePage;
 
-import com.slovd.CarinaMyFakeAPI.web.CheckoutPage;
+import com.slovd.CarinaMyFakeAPI.web.page.CheckoutPage;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
 import org.openqa.selenium.SearchContext;
@@ -9,10 +9,10 @@ import org.openqa.selenium.support.FindBy;
 
 public class SideBlockCardItemComponent extends AbstractUIObject {
 
-  @FindBy(xpath = "//button[@data-testid='create_order_btn']")
+  @FindBy(xpath = ".//button[@data-testid='create_order_btn']")
   private ExtendedWebElement createOrderButton;
 
-  @FindBy(xpath = "//div[@data-testid='product_link']//span")
+  @FindBy(xpath = ".//div[@data-testid='product_link']//span")
   private ExtendedWebElement itemTitle;
 
   public SideBlockCardItemComponent(WebDriver driver, SearchContext searchContext) {
@@ -21,6 +21,7 @@ public class SideBlockCardItemComponent extends AbstractUIObject {
   }
 
   public CheckoutPage clickCreateOrderButton() {
+    createOrderButton.hover();
     createOrderButton.click();
     return new CheckoutPage(getDriver());
   }
