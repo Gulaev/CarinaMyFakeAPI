@@ -35,7 +35,6 @@ public class CheckoutPage extends AbstractPage {
   @FindBy(xpath = ".//div[@data-qaid='banochka_popup']")
   private ExtendedWebElement smsSideMenu;
 
-
   public CheckoutPage(WebDriver driver) {
     super(driver);
     setUiLoadedMarker(createOrderButton);
@@ -49,14 +48,9 @@ public class CheckoutPage extends AbstractPage {
     return checkoutContactBlockComponent;
   }
 
-  public List<ExtendedWebElement> getPaymentsMethods() {
-    return paymentsMethods;
-  }
-
-  public ExtendedWebElement clickCreateOrderButton() {
+  public void clickCreateOrderButton() {
     createOrderButton.hover();
     createOrderButton.doubleClick();
-    return smsSideMenu;
   }
 
   public boolean isCreateOrderButtonClickable() {

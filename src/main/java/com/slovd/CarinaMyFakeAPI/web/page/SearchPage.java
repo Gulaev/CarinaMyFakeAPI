@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class SearchPage extends AbstractPage {
 
-  @FindBy(xpath = "//div[@class='l-GwW js-productad']")
+  @FindBy(xpath = "//div[@data-qaid='product_block']")
   private List<ProductCardComponent> productItems;
 
   @FindBy(xpath = "//*[@data-qaid='breadcrumbs_seo_item']//span")
@@ -32,19 +32,15 @@ public class SearchPage extends AbstractPage {
     setUiLoadedMarker(searchElementTitle);
   }
 
-  public boolean isFilterAccepted() {
-    return priceRangeFilterButton.isElementPresent();
-  }
-
-  public void typePricePerFilterField(String value) {
+  private void typePricePerFilterField(String value) {
     pricePerFilterField.type(value);
   }
 
-  public void typePriceToUpFilterField(String value) {
+  private void typePriceToUpFilterField(String value) {
     priceToUpFilterField.type(value);
   }
 
-  public void clickSubmitPriceFilterButton() {
+  private void clickSubmitPriceFilterButton() {
     submitPriceFilterButton.click();
   }
 
@@ -54,5 +50,12 @@ public class SearchPage extends AbstractPage {
 
   public List<ProductCardComponent> getProductItems() {
     return productItems;
+  }
+
+  public SearchPage setFilterPrice(String pricePer, String priceToUp) {
+    typePricePerFilterField(pricePer);
+    typePriceToUpFilterField(priceToUp);
+    clickSubmitPriceFilterButton();
+    return new SearchPage(getDriver());
   }
 }

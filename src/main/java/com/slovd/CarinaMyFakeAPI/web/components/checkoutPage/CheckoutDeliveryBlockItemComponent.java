@@ -44,5 +44,4 @@ public class CheckoutDeliveryBlockItemComponent extends AbstractUIObject {
   }
 
 
-
 }
